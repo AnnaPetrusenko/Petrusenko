@@ -1,0 +1,15 @@
+﻿div {border: solid 3px pink;
+margin: 5ex;
+background-color: blue;
+width:100%;}
+#b1 {background-color: yellow;}
+.y1 {background-color: grey;
+padding: 5px;}
+#b2 {background-color: blue;}
+#b3 {width:25%;
+float:left;}
+#b4 {width:60%;
+float:left;}
+#b5 {width;13%;
+float:left;}
+#b6 {clear:both;}

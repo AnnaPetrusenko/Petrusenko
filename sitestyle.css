@@ -1,0 +1,40 @@
+﻿body
+{ background-image: url(fon.jpg);
+ background-repeat: no-repeat;
+background-attacchment: fixed;
+background-position: top center;
+background-size: 100%;
+padding: 15px;
+margin: 0 auto;
+width: 100%;
+opacity: 0.7;
+filter: alpha(Opasity=70);
+}
+img 
+{ width:100% }
+div 
+{ margin: 5px;
+ border-radius: 20px }
+#mb 
+{ font-family: Geneva, Arial, Helvetica, sans-serif; }
+.a1 
+{background-color: white;
+padding: 5px}
+#b1
+{background-color:gainsboro;
+text-align: center;
+text-transform: uppercase;
+font-size: 160%;
+ }
+#b2 
+{ background-color: wheat;
+color: white;
+width: 20%;
+float: right;}
+#b3 
+{ background-color: salmon;
+width: 70%;
+float: left}
+#b4
+{ background-color: coral;
+clear: both }

@@ -1,0 +1,22 @@
+﻿style.css
+ div{border: 3px solid pink;
+     margin: 5px; 
+     background-color: plum;
+     width: 100%;
+    }
+ #b1{background-color: mediumorchid;
+     width: 100%;
+    }
+ .y1{background-color: thistle;
+     padding: 5px;
+    }
+ #b2{background-color: orchid;
+     width: 25%;
+     float: left;
+    }
+ #b3{width: 50%;
+     float: left;
+    }
+ #b4{clear: both;
+    }
+ 
