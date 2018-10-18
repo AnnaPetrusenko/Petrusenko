@@ -27,7 +27,7 @@ function f1() {
 function f2() {
 
     alert('?????');
-   $("MyDiv2").style.borderLeftColor='blue';
+   $("MyDiv2").style.borderLeftColor='aqua';
     $("MyDiv2").style.letterSpacing='10px';
     $("MyDiv2").style.paddingBottom='5%';
     $("MyDiv2").style.textDecoration='overline';
@@ -38,7 +38,7 @@ function f2() {
 function f3() {
 
     alert('?????');
-   $("MyDiv3").style.borderLeftColor='blue';
+   $("MyDiv3").style.borderLeftColor='teal';
     $("MyDiv3").style.letterSpacing='10px';
     $("MyDiv3").style.paddingBottom='5%';
     $("MyDiv3").style.textDecoration='overline';
@@ -48,7 +48,7 @@ function f3() {
 function f4() {
 
     alert('?????');
-   $("MyDiv4").style.borderLeftColor='blue';
+   $("MyDiv4").style.borderLeftColor='olive';
     $("MyDiv4").style.letterSpacing='10px';
     $("MyDiv4").style.paddingBottom='5%';
     $("MyDiv4").style.textDecoration='overline';
@@ -59,7 +59,7 @@ function f4() {
 function f5() {
 
     alert('?????');
-   $("MyDiv5").style.borderLeftColor='blue';
+   $("MyDiv5").style.borderLeftColor='gray';
     $("MyDiv5").style.letterSpacing='10px';
     $("MyDiv5").style.paddingBottom='5%';
     $("MyDiv5").style.textDecoration='overline';
@@ -69,7 +69,7 @@ function f5() {
 function f6() {
 
     alert('?????');
-   $("MyDiv6").style.borderLeftColor='blue';
+   $("MyDiv6").style.borderLeftColor='maroon';
     $("MyDiv6").style.letterSpacing='10px';
     $("MyDiv6").style.paddingBottom='5%';
     $("MyDiv6").style.textDecoration='overline';
