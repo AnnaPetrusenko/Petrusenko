@@ -17,7 +17,6 @@ function f1()
         x1=a;
         x2=b;
 	if(a>b)
-
 {$('tx3').value=''+b;
 }
  else
