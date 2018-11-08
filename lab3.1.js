@@ -16,7 +16,7 @@ function f1()
 	b=parseFloat($('tx2').value);
         x1=a;
         x2=b;
-	if(a>b)
+	if(a<b)
 {$('tx3').value=''+b;
 }
  else
