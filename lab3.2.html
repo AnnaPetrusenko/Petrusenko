@@ -8,66 +8,36 @@
  <meta charset=utf-8>
  <link rel="stylesheet" type="text/css" href="sitestyle.css">
 <script>
-var t;
-var r1=255;
-var g1=255;
-var b10=255;
-function f()
-{
-var x1=document.getElementById('b10');
-x1.style.left=(parseInt(x1.style.left)+100)+'px';
-x1.style.top=(parseInt(x1.style.top)+100)+'px';
-r1-=100;
-str1='rgb('+r1+', '+g1+', '+b1+')';
-x1.style.backgroundColor=str1;
-}
-function k()
-{t=setInterval('f()',1000);}
-function g()
-{
-clearInterval(t);
-}
-	function $(){
+﻿function $() 
+{ var elements = new Array(); 
+for (var i = 0; i < arguments.length; i++) 
+{ var element = arguments[i]; 
+if (typeof element == 'string') 
+element = document.getElementById(element); 
+if (arguments.length == 1) 
+return element; 
+elements.push(element); 
+} 
+return elements; }
 
-			var elements = new Array();
-			for (var i = 0; i < arguments.length; i++) {
-				var element = arguments[i];
-				if (typeof element == 'string')
-				element = document.getElementById(element);
-				if (arguments.length == 1)
-				return element;
-				elements.push(element);
-		
-			}
-		return elements;
-		}
- function(1) {
-			
-			var x = document.getElementById('x').value;
-			var n = document.getElementById('n').value;
-			var result = 0;
-			
-			if(x == "" || n == ""){
-				alert('Please enter all fields!');
-				return;
-			}
-
-			if (x>=1 || x<=(-1)) {
-				alert('Число X (|X| < 1)'); 
-				return;
-			}
-			
-			if (n <= 0 || n % 1 !== 0) {
-				alert('N - натуральное');
-				return;
-			}
- 			
- 			for (var i = 1; i <= n; i++) {
- 				result = Math.pow(-1, i - 1) * Math.pow(x, i)/i + result;
+function sum()
+{
+        var k = parseFloat(document.getElementById('k').value);
+			var n = parseInt(document.getElementById('n').value);
+                        var p1 = 1;
+                        var p2 = 1;
+                        var p3 = 1;
+                        var s = 0;
+for (var i = 1; i <= n; i++)
+                        {
+                              p1 = p1*(2*i-1);
+                              p2 = p2*(2*i)*(2*i+1);
+ 		              p3 = Math.pow(k,2*i+1);
+                              s = s+p1*p3/p2;
  			}
 
- 			$('result').value = result;
-		}
+ 			$('s').value = s;
+	}
 </script>
 </head>
 <body>
@@ -88,22 +58,23 @@ clearInterval(t);
  <li><a href="JavaScript2.html">Java Script2</a></li>
   <li><a href="lab3.1.html">Лабораторна робота 3.1(js)</a></li>
    <li><a href="lab3.2.html">Лабораторна робота 3.2</a></li>
+	<li><a href="lab3.3.html">Лабораторна робота 3.3</a></li>
+	<li><a href="lab3.4.html">Лабораторна робота 3.4</a></li>
+	<li><a href="lab3.5.html">Лабораторна робота 3.5</a></li>
 </ul>
 </div>
 <div id="b3" class="a1" style="position:relative;" >
 
 <p>Задание 26</p>
-<p>
-Дано вещественное число X (|X| < 1) и целое число N (> 0). Найти значение выражения
-X−X^/3+X^5/5 − . . . + (−1)^N ·X^2·N+1/(2·N+1).
-Полученное число является приближенным значением функции arctg в точке X.</p>
-<form>
-  		  <input type="number" name="x" id="x" placeholder="Число X">
+ <form action="">
+      	<p>Дано вещественное число X (|X| < 1) и целое число N (> 0). Найти значение выражения X + 1·X 3 /(2·3) + 1·3·X 5 /(2·4·5) + . . . + + 1·3·. . .·(2·N−1)·X 2·N+1/(2·4·. . .·(2·N)·(2·N+1)).
+Полученное число является приближенным значением функции arcsin в точке X</p>
+        <form>
+  		  <input type="number" name="k" id="k" placeholder="Число K">
   		  <input type="number" name="n" id="n" placeholder="Число N">
-  		  <input type="button" name="but" onclick="function(1)" value="Сумма ряда">
+  		  <input type="button" name="s" onclick="sum()" value="Решить">
   	    </form>
-      <br>
-  	<textarea cols="100" rows="2" id="result"></textarea>
+        <textarea cols="100" rows="2" id="s"></textarea>
 </div>
 </body>
 </html>
