@@ -27,6 +27,33 @@ function g()
 {
 clearInterval(t);
 }
+ function taylorFormula() {
+			
+			var x = document.getElementById('x').value;
+			var n = document.getElementById('n').value;
+			var result = 0;
+			
+			if(x == "" || n == ""){
+				alert('Please enter all fields!');
+				return;
+			}
+
+			if (x>=1 || x<=(-1)) {
+				alert('Число X (|X| < 1)'); 
+				return;
+			}
+			
+			if (n <= 0 || n % 1 !== 0) {
+				alert('N - натуральное');
+				return;
+			}
+ 			
+ 			for (var i = 1; i <= n; i++) {
+ 				result = Math.pow(-1, i - 1) * Math.pow(x, i)/i + result;
+ 			}
+
+ 			$('result').value = result;
+		}
 </script>
 </head>
 <body>
@@ -56,23 +83,13 @@ clearInterval(t);
 Дано вещественное число X (|X| < 1) и целое число N (> 0). Найти значение выражения
 X−X^/3+X^5/5 − . . . + (−1)^N ·X^2·N+1/(2·N+1).
 Полученное число является приближенным значением функции arctg в точке X.</p>
-<p>"X= "
-<input name="t1" id="tx1" type="text" value></p>
-<p>
-"N = "
-<input name="t2" id="tx2" type="text" value></p>
-<p>
-<input name="tx4" onclick="f1()" type="button" id="tx4" value="Сумма ряда"></p>
-<p>
-"Ответ"
-<textarea name="comment" id="tx3" cols="40" rows="3"></textarea>
-</p>
-</form>
-</div>
- <div id="b4" class="c">
-<p>&nbsp;&nbsp;&nbsp;&nbsp;
-&copy; Петрусенко Анна, 2018</p>
-</div>
+<form>
+  		  <input type="number" name="x" id="x" placeholder="Число X">
+  		  <input type="number" name="n" id="n" placeholder="Число N">
+  		  <input type="button" name="but" onclick="taylorFormula()" value="Сумма ряда">
+  	    </form>
+      <br>
+  	<textarea cols="100" rows="2" id="result"></textarea>
 </div>
 </body>
 </html>
